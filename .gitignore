@@ -6,3 +6,6 @@
 
 # Dépendances éventuelles
 node_modules/
+
+# Cache local de wrangler / Cloudflare
+.wrangler/
