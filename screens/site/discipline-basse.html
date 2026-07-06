@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BASSE — Discipline | MONTA'ZIK</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .rim-light {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .glow-primary {
+            filter: drop-shadow(0 0 8px rgba(245, 197, 68, 0.6));
+        }
+        .stage-gradient {
+            background:
+                linear-gradient(to right, rgba(249, 249, 249, 0.55) 0%, rgba(249, 249, 249, 0.15) 45%, transparent 68%),
+                linear-gradient(to bottom, transparent 0%, transparent 24%, rgba(249, 249, 249, 0.55) 50%, rgba(249, 249, 249, 0.9) 78%, #f9f9f9 100%);
+        }
+        .card-hover-reveal img {
+            filter: grayscale(1) contrast(0.95) brightness(1.22);
+            transition: transform 0.5s ease;
+        }
+        .card-hover-reveal:hover img {
+            transform: scale(1.05);
+        }
+        /* Teinte duotone identique sur toutes les cartes disciplines */
+        .card-tint {
+            background: linear-gradient(to top, #6d28d9 0%, #a21caf 42%, #db2777 72%, #f472b6 100%);
+            mix-blend-mode: color;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .card-wash {
+            background: rgba(255, 255, 255, 0.16);
+            pointer-events: none;
+        }
+        .card-shade {
+            background: linear-gradient(to top, rgba(18,10,38,0.72) 0%, rgba(18,10,38,0.1) 48%, transparent 78%);
+            pointer-events: none;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f3f3f3;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #131316;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#f9dedc",
+                    "background": "#f9f9f9",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary": "#131316",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#f5c544",
+                    "surface-bright": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#313033",
+                    "on-primary-container": "#131316",
+                    "inverse-on-surface": "#f4f0f4",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474e",
+                    "on-error-container": "#410002",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#131316",
+                    "inverse-primary": "#f5c544",
+                    "primary-container": "#f5c544",
+                    "secondary-container": "#131316",
+                    "on-surface": "#1b1b1f",
+                    "surface-dim": "#dadada",
+                    "secondary": "#131316",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#131316",
+                    "on-tertiary-container": "#1d1b16",
+                    "surface-tint": "#f5c544",
+                    "on-secondary-fixed-variant": "#131316",
+                    "primary-fixed-dim": "#f5c544",
+                    "on-primary-fixed": "#131316",
+                    "on-secondary-container": "#ffffff",
+                    "surface-container": "#f3f3f3",
+                    "tertiary": "#131316",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "outline": "#74777f",
+                    "tertiary-container": "#f3f3f3",
+                    "on-background": "#1b1b1f",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-variant": "#e1e2ec",
+                    "surface-container-highest": "#e3e3e3",
+                    "surface-container-high": "#ebebeb",
+                    "outline-variant": "#c4c6d0",
+                    "secondary-fixed": "#131316",
+                    "error": "#b3261e",
+                    "on-secondary-fixed": "#ffffff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0rem",
+                    "lg": "0rem",
+                    "xl": "0rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "88px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md custom-scrollbar overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 border-b border-black/5 backdrop-blur-md transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<a class="flex items-center gap-3" href="01_accueil.html">
+<img alt="Emblème Monta’zik" class="h-20 w-auto" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">MONTA'ZIK</div>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="01_accueil.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="03_professeurs.html">Professeurs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="02_tarifs.html">Tarifs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="05_blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase hover:bg-primary-container hover:text-primary transition-all duration-300">S'inscrire</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero -->
+<header class="relative w-full min-h-[62vh] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale-[0.15]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALpDS7ym9rC8aS5POikEia-AmTk2wsl8zAm1uk83p7aaWOIoH2noiq64oYZxJczDsr0unYctCPLcYWwgWu7fLZL0VzJJB3VpvBnfYMJlKSAEq_r66g06RONlHxxvTb7ds89sPLzp8RccLGaC6qxtypd1TAZen55kehHVBDURnhpvrwC88un14xrgYLX58byLdyoAne3dPOtvkIgviIOzUfrSGPth0pj2duhmtehaJCT9qimQw-ub1zJ-z1htNGijsmauWpMBHRAtw')"></div>
+<div class="absolute inset-0 stage-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-16">
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest mb-6 hover:gap-3 transition-all" href="01_accueil.html#disciplines">
+<span class="material-symbols-outlined text-base">arrow_back</span> Toutes les disciplines
+</a>
+<span class="inline-block px-3 py-1 bg-primary-container text-primary text-label-md font-label-md mb-4 uppercase tracking-widest glow-primary">Groove</span>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary leading-none mb-4">BASSE</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">Le pont entre le rythme et l'harmonie : la colonne vertébrale du son.</p>
+</div>
+</header>
+<!-- Contenu -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-3 gap-16">
+<div class="lg:col-span-2 space-y-6">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-2">La discipline</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed">Souvent discrète, la basse est pourtant essentielle : c'est elle qui relie la batterie et l'harmonie, qui fait bouger les têtes et danser les corps. À MONTA'ZIK, vous apprenez à poser un groove imparable et à trouver votre juste place dans le groupe.</p>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed">Du walking jazz au slap funk, en passant par les lignes rock et pop, vous développez votre oreille, votre placement rythmique et votre son.</p>
+<h3 class="font-headline-md text-headline-md text-primary uppercase pt-6">Ce que vous allez travailler</h3>
+<ul class="space-y-3">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-container mt-0.5">check</span><span class="text-on-surface-variant font-body-lg text-body-lg">Mise en place avec la batterie (le couple basse-batterie)</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-container mt-0.5">check</span><span class="text-on-surface-variant font-body-lg text-body-lg">Construction de lignes de basse groovy</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-container mt-0.5">check</span><span class="text-on-surface-variant font-body-lg text-body-lg">Techniques : jeu aux doigts, au médiator, slap</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-container mt-0.5">check</span><span class="text-on-surface-variant font-body-lg text-body-lg">Lecture, tablatures et déchiffrage</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-container mt-0.5">check</span><span class="text-on-surface-variant font-body-lg text-body-lg">Jeu en groupe et écoute des autres musiciens</span></li>
+</ul>
+</div>
+<!-- Encart pratique + CTA -->
+<aside class="space-y-gutter lg:sticky lg:top-28 self-start">
+<div class="bg-surface-container p-8 border border-black/5">
+<h3 class="font-headline-md text-2xl text-primary uppercase mb-6">En pratique</h3>
+<dl class="space-y-5">
+<div><dt class="text-label-sm font-label-sm uppercase tracking-widest font-bold text-primary mb-1">Public</dt><dd class="text-on-surface-variant font-body-md text-body-md">Ados et adultes (dès 8 ans)</dd></div>
+<div><dt class="text-label-sm font-label-sm uppercase tracking-widest font-bold text-primary mb-1">Format</dt><dd class="text-on-surface-variant font-body-md text-body-md">Cours individuels ou en petit groupe, hebdomadaires</dd></div>
+<div><dt class="text-label-sm font-label-sm uppercase tracking-widest font-bold text-primary mb-1">Niveau</dt><dd class="text-on-surface-variant font-body-md text-body-md">Tous niveaux</dd></div>
+</dl>
+</div>
+<a class="block bg-primary text-on-primary text-center px-8 py-5 font-label-md text-label-md uppercase hover:bg-primary-container hover:text-primary transition-all duration-300" href="04_contact.html">S'inscrire à ce cours</a>
+<a class="block border border-primary text-primary text-center px-8 py-5 font-label-md text-label-md uppercase hover:bg-primary hover:text-on-primary transition-all duration-300" href="02_tarifs.html">Voir les tarifs</a>
+</aside>
+</section>
+<!-- Autres disciplines -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap">
+<h2 class="font-headline-lg text-headline-lg-mobile text-primary uppercase mb-8">Autres disciplines</h2>
+<div class="flex flex-wrap gap-4">
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-batterie.html"><span class="font-label-md text-label-md uppercase text-primary">BATTERIE</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-guitare.html"><span class="font-label-md text-label-md uppercase text-primary">GUITARE</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-chant.html"><span class="font-label-md text-label-md uppercase text-primary">CHANT</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-piano.html"><span class="font-label-md text-label-md uppercase text-primary">PIANO</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-eveil-musical.html"><span class="font-label-md text-label-md uppercase text-primary">ÉVEIL MUSICAL</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+<a class="group flex items-center gap-2 border border-black/10 bg-surface-container-lowest px-5 py-3 hover:bg-primary-container hover:border-primary-container transition-colors" href="discipline-jeu-en-groupe.html"><span class="font-label-md text-label-md uppercase text-primary">JEU EN GROUPE</span><span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-transform">trending_flat</span></a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-low border-t border-black/5">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop py-16 gap-gutter max-w-full">
+<div class="flex flex-col gap-6 max-w-sm">
+<img alt="Emblème Monta’zik" class="h-32 w-auto self-start" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-md text-headline-md text-primary uppercase">MONTA'ZIK</div>
+<p class="text-on-surface-variant text-body-md font-body-md">
+                    L'école de musique de référence pour les musiques actuelles. Apprenez, jouez, performez.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="tel:+33625553636" aria-label="Téléphone Monta'zik">
+<span class="material-symbols-outlined text-sm">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="mailto:asso.montazik@gmail.com" aria-label="E-mail Monta'zik">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="https://www.facebook.com/profile.php?id=61550663325502" target="_blank" rel="noopener noreferrer" aria-label="Facebook Monta'zik">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">École</h4>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">Espace</h4>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Portail Étudiant</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Connexion Équipe</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">Contact</h4>
+<span class="text-on-surface-variant font-label-sm text-label-sm">29 Grande Rue, 33570 Montagne, France</span>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="tel:+33625553636">06 25 55 36 36</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="mailto:asso.montazik@gmail.com">asso.montazik@gmail.com</a>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm opacity-60">© 2024 MONTA'ZIK École de Musique. Tous droits réservés.</span>
+<div class="flex gap-8">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Site réalisé par Rescue Pro</span>
+</div>
+</div>
+</footer>
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { nav.classList.add('py-2','shadow-sm'); nav.classList.remove('py-4'); }
+            else { nav.classList.add('py-4'); nav.classList.remove('py-2','shadow-sm'); }
+        });
+    </script>
+</body></html>
