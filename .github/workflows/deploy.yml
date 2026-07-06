@@ -1,0 +1,24 @@
+name: Déploiement Cloudflare Pages
+
+# Redéploie le site à chaque push sur main (et permet un lancement manuel).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v4
+
+      - name: Déploiement sur Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy screens/site --project-name monta-zik --branch main
