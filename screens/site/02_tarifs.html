@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tarifs &amp; Formules | MONTA'ZIK</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration using Design System 8 Theme -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary": "#000000",
+                "on-primary": "#f5c544",
+                "primary-container": "#f5c544",
+                "on-primary-container": "#000000",
+                "secondary": "#333333",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#eeeeee",
+                "on-secondary-container": "#000000",
+                "background": "#ffffff",
+                "on-background": "#000000",
+                "surface": "#f9f9f9",
+                "on-surface": "#000000",
+                "surface-variant": "#eeeeee",
+                "on-surface-variant": "#444444",
+                "outline": "#dadada",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f3f3f3",
+                "surface-container": "#eeeeee",
+                "surface-container-high": "#e2e2e2",
+                "surface-container-highest": "#d6d6d6"
+            },
+            "borderRadius": {
+                "DEFAULT": "0px",
+                "lg": "0px",
+                "xl": "0px",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "unit": "8px",
+                "gutter": "24px",
+                "section-gap": "120px"
+            },
+            "fontFamily": {
+                "body-md": ["Hanken Grotesk"],
+                "headline-xl": ["Anton"],
+                "headline-lg": ["Anton"],
+                "headline-lg-mobile": ["Anton"],
+                "label-sm": ["Hanken Grotesk"],
+                "headline-md": ["Anton"],
+                "body-lg": ["Hanken Grotesk"],
+                "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-xl": ["80px", {"lineHeight": "88px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                "headline-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .stage-gradient-light {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+        .card-border {
+            border: 1px solid #e2e2e2;
+        }
+        .high-contrast-shadow {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+        .featured-gold {
+            background: linear-gradient(140deg, #ffdc63 0%, #f5c544 50%, #e0a52a 100%);
+        }
+        .featured-gold.high-contrast-shadow {
+            box-shadow: 8px 8px 0px 0px #000000, 0 0 44px 0 rgba(245, 197, 68, 0.55);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f3f3f3; }
+        ::-webkit-scrollbar-thumb { background: #000000; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-black/5 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300 ease-in-out">
+<a class="flex items-center gap-3" href="01_accueil.html">
+<img alt="Emblème Monta’zik" class="h-20 w-auto" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">MONTA'ZIK</div>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="01_accueil.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="03_professeurs.html">Professeurs</a>
+<a class="font-label-md text-label-md text-primary border-b-4 border-primary-container pb-1" href="02_tarifs.html">Tarifs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="05_blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
+</div>
+<button class="bg-primary px-6 py-2 rounded-none font-label-md text-label-md text-white hover:bg-primary-container hover:text-black transition-all duration-300 uppercase">
+            S'inscrire
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[600px] flex flex-col justify-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125 opacity-30" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkt7LYncEzidErSPhIEXRQsBH9Gvt83J0qUyI_w82_e8iAOZWy1p979zUORY89k5IaO3myLJ-IRWz_kUv-TkijKhmQCa1JgYgf7ysPeCJh5TXQoETbE3QN4HVuSZlcYKAOSAzyFEyATAKBEp137VHlRyqbn0Jqga9eY4la4wWkU1ErBFwQbo7DuxKQboJFk2IIgiCvTOZ92yNK7HGYEv28RQYZ6XsihUyQonsQMzz7C7rLPywYIKa5z7Go6rECCSA2XWVuvq5RsYc')"></div>
+<div class="absolute inset-0 stage-gradient-light"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop pb-20 max-w-6xl">
+<h1 class="font-headline-xl text-6xl md:text-headline-xl text-primary uppercase mb-4 leading-none">
+                Tarifs &amp; Formules
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Une formule pour chaque envie de jouer. Cours particuliers, ateliers de groupe ou accès total : trouvez la vôtre et rejoignez la scène de MONTA'ZIK, à Montagne.
+            </p>
+</div>
+</header>
+<main class="px-margin-mobile md:px-margin-desktop space-y-section-gap pb-section-gap">
+<!-- Pricing Cards Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mt-10">
+<!-- Individual Lessons -->
+<div class="bg-surface-container-lowest card-border p-10 flex flex-col h-full group hover:border-black transition-all duration-300">
+<div class="flex justify-between items-start mb-10">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-2">Performance Solo</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Cours Individuels</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary">person</span>
+</div>
+<div class="mb-10">
+<span class="font-headline-lg text-headline-lg text-primary">45€</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ SÉANCE</span>
+</div>
+<ul class="space-y-4 mb-auto">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Suivi pédagogique personnalisé</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Instrument au choix</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Prêt d'instrument sur place</span>
+</li>
+</ul>
+<a href="04_contact.html" class="mt-12 block text-center w-full py-4 border-2 border-black text-black font-label-md text-label-md uppercase hover:bg-black hover:text-white transition-all">
+                    Réserver un cours
+                </a>
+</div>
+<!-- Group Workshops (Featured with Logo Gold) -->
+<div class="featured-gold p-10 flex flex-col h-full relative high-contrast-shadow group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-black text-white px-3 py-1 text-label-sm font-label-sm uppercase tracking-tighter">Populaire</div>
+</div>
+<div class="flex justify-between items-start mb-10">
+<div>
+<span class="font-label-md text-label-md text-black/60 uppercase tracking-widest block mb-2">Dynamique de Groupe</span>
+<h3 class="font-headline-md text-headline-md text-black uppercase">Ateliers Collectifs</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-black">groups</span>
+</div>
+<div class="mb-10">
+<span class="font-headline-lg text-headline-lg text-black">120€</span>
+<span class="font-label-md text-label-md text-black/60">/ MOIS</span>
+</div>
+<ul class="space-y-4 mb-auto">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-black text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-black font-bold">Jeu en groupe (4-6 pers.)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-black text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-black font-bold">Préparation aux concerts</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-black text-lg">check_circle</span>
+<span class="font-body-md text-body-md text-black font-bold">Préparation scénique mensuelle</span>
+</li>
+</ul>
+<a href="04_contact.html" class="mt-12 block text-center w-full py-4 bg-black text-white font-label-md text-label-md uppercase hover:bg-white hover:text-black transition-all">
+                    Rejoindre un groupe
+                </a>
+</div>
+<!-- Full Year Membership -->
+<div class="bg-surface-container-lowest card-border p-10 flex flex-col h-full group hover:border-black transition-all duration-300">
+<div class="flex justify-between items-start mb-10">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-2">Accès Total</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Forfait Annuel</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary">verified_user</span>
+</div>
+<div class="mb-10">
+<span class="font-headline-lg text-headline-lg text-primary">990€</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ AN</span>
+</div>
+<ul class="space-y-4 mb-auto">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Cours illimités + Ateliers</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Masterclasses exclusives</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-md text-body-md">Enregistrement studio</span>
+</li>
+</ul>
+<a href="04_contact.html" class="mt-12 block text-center w-full py-4 border-2 border-black text-black font-label-md text-label-md uppercase hover:bg-black hover:text-white transition-all">
+                    Devenir membre
+                </a>
+</div>
+</section>
+<!-- Adhésion associative -->
+<section class="!mt-12">
+<div class="card-border bg-surface-container-low p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+<span class="material-symbols-outlined text-4xl text-black shrink-0">card_membership</span>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    MONTA'ZIK est une <strong class="text-primary">association</strong> : une adhésion annuelle de <strong class="text-primary">35&nbsp;€</strong> est demandée à l'inscription (assurance, vie de l'association et accès à tous nos rendez-vous). Le premier cours d'essai est <strong class="text-primary">offert</strong>, sans engagement.
+                </p>
+<a href="04_contact.html" class="shrink-0 whitespace-nowrap bg-primary-container text-black font-label-md text-label-md px-8 py-4 uppercase hover:bg-black hover:text-white transition-colors font-bold text-center">Nous rejoindre</a>
+</div>
+</section>
+<!-- Les rendez-vous de l'année -->
+<section>
+<div class="mb-12 max-w-3xl">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-3">La vie de l'école</span>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-4">Les rendez-vous de l'année</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Apprendre la musique, c'est bien. La jouer avec les autres, c'est tout l'esprit de MONTA'ZIK. Deux temps forts rythment l'année — et ils sont ouverts à tous nos élèves, quelle que soit la formule choisie.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Concert de fin d'année -->
+<article class="group relative overflow-hidden card-border bg-black text-white min-h-[480px] flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" alt="Élève sur scène lors d'un concert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWho94QZieosY4Wua67b4c7o7EJGqjsLP_GXDwsNX1glOIrgDO4qN3k17Mv3BuwOOFo7_y6IekWuG5tnDjIftrufZV31mjiXfZXbsLAOPXW5MHWbBSDYC2VACRe1QEU9ChoZkzJXzji7vmO1OaE5MMU5bifcC0fuu1mJIJaQK3SDk27hYweia0fDP3pJkIUg1s3fXgH5XnuObtLLTkmRdRlZCDCvLpBz6nGHTrdL_K69HaGJkvMF9WAT2ZOEhksMWhdJkmQQ1rY9U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent"></div>
+<div class="relative z-10 p-8 md:p-10">
+<span class="inline-block bg-primary-container text-black font-label-sm text-label-sm uppercase tracking-widest px-3 py-1 mb-5">Juin · Le grand soir</span>
+<h3 class="font-headline-md text-3xl md:text-4xl uppercase mb-4 leading-none">Le concert<br/>de fin d'année</h3>
+<p class="font-body-md text-white/80 mb-6 max-w-md">Chaque élève monte sur une vraie scène, devant sa famille et le village, pour jouer ce qu'il a travaillé toute l'année. Premier morceau ou set complet, en solo ou en groupe : tout le monde a sa place sous les projecteurs.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Une vraie scène, un vrai public</li>
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Tous les niveaux, tous les instruments</li>
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Entrée libre pour les proches</li>
+</ul>
+</div>
+</article>
+<!-- Soirée bœuf -->
+<article class="group relative overflow-hidden card-border bg-black text-white min-h-[480px] flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" alt="Musiciens réunis pour une jam session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuTTg2FE6TQA_al9GG2p2-LBDK_C9i7QgRmncAN0ajRYHvZj7JBfZz8BOUmcFBtPiclJjApuCkxLNlBvQkgY0WP66molWpk5D-xorGlEtlYO0SPNQ8VvZgPB2l-7xnQrG1SA-ch-aw0yn-e6aHMHLL0uR9T5sf1OP7ea1holcfLmonr6D7xUdz7UgSDPXba90WlCutJdWitZJ1SjF3aQfuy6dJH_cvSd4uec4Aw4PZ70lJ0GHhmT0K3IXdHr5qmJsnpe3O07W7uoA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent"></div>
+<div class="relative z-10 p-8 md:p-10">
+<span class="inline-block bg-primary-container text-black font-label-sm text-label-sm uppercase tracking-widest px-3 py-1 mb-5">Une fois par an · Convivial</span>
+<h3 class="font-headline-md text-3xl md:text-4xl uppercase mb-4 leading-none">La soirée<br/>bœuf</h3>
+<p class="font-body-md text-white/80 mb-6 max-w-md">Un « bœuf », c'est une jam : on branche, on s'installe et on joue ensemble, au feeling, sans partition. Élèves, profs et musiciens du coin se retrouvent pour improviser, tester des morceaux et se lâcher — bonne humeur garantie, zéro pression.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Ouverte à tous les élèves</li>
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Tous niveaux, aucune pression</li>
+<li class="flex items-center gap-3 text-sm text-white/80"><span class="material-symbols-outlined text-primary-container text-lg">check_circle</span> Instruments prêtés sur place</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA final -->
+<section class="bg-black text-white p-margin-mobile md:p-20 text-center">
+<div class="max-w-3xl mx-auto space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary-container uppercase">Votre place est sur scène</h2>
+<p class="font-body-lg text-body-lg text-white/80">Choisissez votre formule, poussez la porte de l'école à Montagne, et retrouvez-nous au prochain bœuf comme au concert de fin d'année. Le premier cours d'essai est offert.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="04_contact.html" class="bg-primary-container text-black font-label-md text-label-md px-10 py-4 uppercase hover:bg-white transition-colors font-bold">Réserver mon cours d'essai</a>
+<a href="06_histoire.html" class="border-2 border-white text-white font-label-md text-label-md px-10 py-4 uppercase hover:bg-white hover:text-black transition-colors">Découvrir l'école</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-black/5 w-full mt-section-gap px-margin-mobile md:px-margin-desktop py-16 flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="space-y-6 max-w-sm">
+<img alt="Emblème Monta’zik" class="h-32 w-auto self-start" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">MONTA'ZIK</div>
+<p class="font-body-md text-body-md text-on-surface-variant">L'école de musique qui amplifie votre énergie. Du rock au jazz, nous formons les artistes de demain.</p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">L'École</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-black transition-colors" href="#">Conditions</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-black transition-colors" href="#">Confidentialité</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">Portail</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-black transition-colors" href="#">Étudiant</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-black transition-colors" href="#">Équipe</a>
+</div>
+</div>
+<div class="w-full md:w-auto mt-10 md:mt-0 pt-10 md:pt-0 border-t md:border-t-0 border-black/5">
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-80">
+                © 2024 MONTA'ZIK École de Musique.
+            </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-60 mt-1">Site réalisé par Rescue Pro</div>
+</div>
+</footer>
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-white/98', 'shadow-sm');
+                nav.classList.remove('py-4', 'bg-white/95');
+            } else {
+                nav.classList.add('py-4', 'bg-white/95');
+                nav.classList.remove('py-2', 'bg-white/98', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>

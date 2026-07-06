@@ -1,0 +1,149 @@
+<svg viewBox="316 228 574 512" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(15,0)">
+  <!-- étoile blanche -->
+  <polygon points="624.2,289.4 649.0,450.2 808.8,480.5 663.6,553.8 684.1,715.1 569.5,599.6 422.4,669.0 496.9,524.4 385.5,405.9 546.0,432.0" fill="#131316"/>
+
+  <!-- éclair blanc (accent bas-gauche) -->
+  <g transform="translate(424,650) rotate(195) scale(0.55)">
+    <path d="M 38,-138 L -55,25 L -10,25 L -35,130 L 58,-25 L 12,-25 Z" fill="#131316"/>
+  </g>
+
+  <!-- grand éclair jaune -->
+  <g transform="translate(645,355) rotate(20)">
+    <path d="M 38,-138 L -55,25 L -10,25 L -35,130 L 58,-25 L 12,-25 Z" fill="#F5C544"/>
+  </g>
+
+  <!-- batterie -->
+  <g transform="translate(732,650)" stroke="#F5C544" fill="none" stroke-linecap="round">
+    <!-- pieds de cymbales -->
+    <line x1="-56" y1="-8" x2="-76" y2="-84" stroke-width="5"/>
+    <line x1="60" y1="-6" x2="82" y2="-76" stroke-width="5"/>
+    <ellipse cx="-80" cy="-89" rx="27" ry="6" fill="#F5C544" stroke="none" transform="rotate(-14 -80 -89)"/>
+    <ellipse cx="86" cy="-81" rx="29" ry="6" fill="#F5C544" stroke="none" transform="rotate(12 86 -81)"/>
+    <!-- pieds grosse caisse -->
+    <line x1="-34" y1="36" x2="-52" y2="64" stroke-width="6"/>
+    <line x1="34" y1="36" x2="52" y2="64" stroke-width="6"/>
+    <!-- toms montés -->
+    <circle cx="-25" cy="-48" r="17" stroke-width="5" fill="#1A1512"/>
+    <circle cx="19" cy="-50" r="17" stroke-width="5" fill="#1A1512"/>
+    <!-- grosse caisse -->
+    <circle cx="0" cy="0" r="52" fill="#FFFFFF" stroke-width="8"/>
+    <circle cx="15" cy="11" r="7" fill="#F5C544" stroke="none"/>
+  </g>
+
+  <!-- micro sur pied -->
+  <g transform="translate(438,492) rotate(40)">
+    <line x1="0" y1="58" x2="0" y2="152" stroke="#131316" stroke-width="7" stroke-linecap="round"/>
+    <line x1="-22" y1="164" x2="22" y2="164" stroke="#131316" stroke-width="9" stroke-linecap="round"/>
+    <line x1="0" y1="152" x2="0" y2="164" stroke="#131316" stroke-width="7"/>
+    <path d="M -16,-14 L 16,-14 L 10,62 L -10,62 Z" fill="#F5C544" stroke="#1A1512" stroke-width="4"/>
+    <rect x="-15" y="-12" width="30" height="11" fill="#FFFFFF"/>
+    <circle cx="0" cy="-38" r="25" fill="#F5C544" stroke="#1A1512" stroke-width="4"/>
+    <line x1="-24" y1="-44" x2="24" y2="-44" stroke="#1A1512" stroke-width="3"/>
+    <line x1="-25" y1="-34" x2="25" y2="-34" stroke="#1A1512" stroke-width="3"/>
+    <line x1="-18" y1="-24" x2="18" y2="-24" stroke="#1A1512" stroke-width="3"/>
+  </g>
+
+  <!-- guitare -->
+  <g transform="translate(575,545) rotate(45)">
+    <!-- corps -->
+    <path d="M -19,-76
+             C -58,-84 -88,-58 -84,-22
+             C -81,6 -70,26 -58,40
+             C -80,60 -90,104 -62,130
+             C -32,156 32,156 62,130
+             C 90,104 80,60 58,40
+             C 70,26 81,6 84,-22
+             C 88,-58 56,-86 32,-62
+             C 26,-55 22,-46 20,-40
+             L 20,-76 Z"
+          fill="#F5C544" stroke="#1A1512" stroke-width="6" stroke-linejoin="round"/>
+    <!-- manche -->
+    <rect x="-14" y="-302" width="28" height="242" fill="#F5C544" stroke="#1A1512" stroke-width="5"/>
+    <!-- frettes -->
+    <g stroke="#1A1512" stroke-width="3">
+      <line x1="-14" y1="-95" x2="14" y2="-95"/>
+      <line x1="-14" y1="-127" x2="14" y2="-127"/>
+      <line x1="-14" y1="-159" x2="14" y2="-159"/>
+      <line x1="-14" y1="-191" x2="14" y2="-191"/>
+      <line x1="-14" y1="-223" x2="14" y2="-223"/>
+      <line x1="-14" y1="-255" x2="14" y2="-255"/>
+    </g>
+    <!-- cordes -->
+    <g stroke="#1A1512" stroke-width="1.6">
+      <line x1="-6" y1="-296" x2="-6" y2="50"/>
+      <line x1="0" y1="-296" x2="0" y2="50"/>
+      <line x1="6" y1="-296" x2="6" y2="50"/>
+    </g>
+    <!-- tête -->
+    <path d="M -14,-300 L -28,-312 L -26,-372 C -26,-380 26,-380 26,-372 L 28,-312 L 14,-300 Z"
+          fill="#F5C544" stroke="#1A1512" stroke-width="5" stroke-linejoin="round"/>
+    <g fill="#1A1512">
+      <circle cx="-17" cy="-322" r="4.5"/>
+      <circle cx="-17" cy="-341" r="4.5"/>
+      <circle cx="-17" cy="-360" r="4.5"/>
+      <circle cx="17" cy="-322" r="4.5"/>
+      <circle cx="17" cy="-341" r="4.5"/>
+      <circle cx="17" cy="-360" r="4.5"/>
+    </g>
+    <!-- micros -->
+    <rect x="-32" y="-32" width="64" height="22" rx="5" fill="#1A1512"/>
+    <rect x="-32" y="12" width="64" height="22" rx="5" fill="#1A1512"/>
+    <rect x="-26" y="-27" width="52" height="12" rx="3" fill="#FFFFFF"/>
+    <rect x="-26" y="17" width="52" height="12" rx="3" fill="#FFFFFF"/>
+    <!-- chevalet -->
+    <rect x="-30" y="52" width="60" height="10" rx="4" fill="#1A1512"/>
+    <rect x="-22" y="74" width="44" height="9" rx="4" fill="#1A1512"/>
+    <!-- boutons -->
+    <circle cx="46" cy="66" r="6.5" fill="#1A1512"/>
+    <circle cx="60" cy="84" r="6.5" fill="#1A1512"/>
+  </g>
+
+  <!-- clavier -->
+  <g transform="translate(368,462) rotate(-8)">
+    <rect x="-36" y="-36" width="72" height="72" rx="14" fill="#F5C544" stroke="#1A1512" stroke-width="5"/>
+    <g stroke="#1A1512" stroke-width="4">
+      <line x1="-18" y1="-36" x2="-18" y2="36"/>
+      <line x1="0" y1="-36" x2="0" y2="36"/>
+      <line x1="18" y1="-36" x2="18" y2="36"/>
+    </g>
+    <g fill="#1A1512">
+      <rect x="-24" y="-36" width="12" height="40" rx="3"/>
+      <rect x="-6" y="-36" width="12" height="40" rx="3"/>
+      <rect x="12" y="-36" width="12" height="40" rx="3"/>
+    </g>
+  </g>
+
+  <!-- médiator -->
+  <g transform="translate(452,404) rotate(22) scale(0.8)">
+    <path d="M 0,-28 C 20,-28 32,-15 32,0 C 32,20 13,32 0,37 C -13,32 -32,20 -32,0 C -32,-15 -20,-28 0,-28 Z"
+          fill="#F5C544" stroke="#1A1512" stroke-width="5"/>
+    <path d="M 0,-16 C 12,-16 20,-9 20,0 C 20,12 8,20 0,24 C -8,20 -20,12 -20,0 C -20,-9 -12,-16 0,-16 Z"
+          fill="none" stroke="#1A1512" stroke-width="3"/>
+  </g>
+
+  <!-- notes de musique -->
+  <g fill="#F5C544">
+    <!-- note simple -->
+    <g transform="translate(492,372)">
+      <ellipse cx="0" cy="0" rx="12" ry="8.5" transform="rotate(-20)"/>
+      <rect x="8" y="-48" width="5" height="49" rx="2"/>
+      <path d="M 13,-48 C 22,-42 27,-32 24,-20 C 27,-30 21,-36 13,-38 Z"/>
+    </g>
+    <!-- notes croches liées -->
+    <g transform="translate(548,330)">
+      <ellipse cx="0" cy="0" rx="11" ry="8" transform="rotate(-20)"/>
+      <ellipse cx="34" cy="-7" rx="11" ry="8" transform="rotate(-20 34 -7)"/>
+      <rect x="7" y="-44" width="5" height="45" rx="2"/>
+      <rect x="41" y="-51" width="5" height="45" rx="2"/>
+      <path d="M 7,-44 L 46,-53 L 46,-41 L 7,-32 Z"/>
+    </g>
+    <!-- petite note -->
+    <g transform="translate(676,296) scale(0.8)">
+      <ellipse cx="0" cy="0" rx="12" ry="8.5" transform="rotate(-20)"/>
+      <rect x="8" y="-48" width="5" height="49" rx="2"/>
+      <path d="M 13,-48 C 22,-42 27,-32 24,-20 C 27,-30 21,-36 13,-38 Z"/>
+    </g>
+  </g>
+  </g>
+</svg>

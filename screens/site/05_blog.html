@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Le Blog de l'École | MONTA'ZIK</title>
+<meta content="Le blog de MONTA'ZIK, école de musiques actuelles à Montagne. Conseils sur les instruments, l'entretien, le jeu en groupe et l'apprentissage de la musique." name="description"/>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d9d9d9",
+                    "on-secondary-fixed": "#1d1b16",
+                    "tertiary-fixed-dim": "#dadada",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e1e1e1",
+                    "on-tertiary-fixed-variant": "#444444",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#f5c544",
+                    "surface-bright": "#f9f9f9",
+                    "error": "#ba1a1a",
+                    "background": "#ffffff",
+                    "primary-fixed-dim": "#f5c544",
+                    "on-surface": "#1b1b1b",
+                    "tertiary-container": "#f3f3f3",
+                    "primary-fixed": "#f5c544",
+                    "on-error-container": "#410002",
+                    "inverse-on-surface": "#f2f0f4",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "surface-container-high": "#ebebeb",
+                    "on-primary-fixed": "#000000",
+                    "surface-tint": "#f5c544",
+                    "on-primary-fixed-variant": "#000000",
+                    "on-tertiary-container": "#1b1b1b",
+                    "on-tertiary": "#000000",
+                    "surface-dim": "#dadada",
+                    "inverse-primary": "#f5c544",
+                    "outline": "#757575",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#000000",
+                    "on-surface-variant": "#444444",
+                    "on-secondary-container": "#000000",
+                    "tertiary": "#000000",
+                    "tertiary-fixed": "#dadada",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "secondary-fixed-dim": "#f5c544",
+                    "primary-container": "#f5c544",
+                    "inverse-surface": "#303030",
+                    "primary": "#000000",
+                    "surface-variant": "#e1e1e1",
+                    "on-background": "#1b1b1b",
+                    "surface-container": "#f9f9f9",
+                    "secondary": "#000000",
+                    "on-secondary-fixed-variant": "#000000",
+                    "secondary-fixed": "#f5c544"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0rem",
+                    "lg": "0rem",
+                    "xl": "0rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "88px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clean-border {
+            border: 1px solid #e1e1e1;
+        }
+        .image-hover-filter img {
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        .image-hover-filter:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f9f9f9; }
+        ::-webkit-scrollbar-thumb { background: #dadada; }
+        ::-webkit-scrollbar-thumb:hover { background: #757575; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant backdrop-blur-md bg-background/95 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300 ease-in-out">
+<a class="flex items-center gap-3" href="01_accueil.html">
+<img alt="Emblème Monta’zik" class="h-16 md:h-20 w-auto" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-lg text-headline-lg-mobile tracking-tighter text-primary">MONTA'ZIK</div>
+</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="01_accueil.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="03_professeurs.html">Professeurs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="02_tarifs.html">Tarifs</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary-container pb-1 transition-colors" href="05_blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
+</div>
+<a href="04_contact.html" class="bg-primary text-on-primary font-label-md text-label-md px-6 md:px-8 py-3 uppercase tracking-widest hover:bg-primary-container hover:text-primary transition-all duration-300">
+        S'inscrire
+    </a>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24 md:mb-section-gap">
+<div class="max-w-4xl">
+<span class="text-primary font-label-md text-label-md mb-4 block tracking-[0.2em] uppercase">Le journal de l'école</span>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-8 leading-none">Le Blog de MONTA'ZIK</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-4 border-primary-container pl-6 py-2">
+                Conseils, coulisses et bonnes idées depuis Montagne. Nos professeurs partagent ce qu'ils transmettent chaque semaine : bien choisir son instrument, en prendre soin, progresser chez soi et vivre la musique ensemble.
+            </p>
+</div>
+</section>
+<!-- Featured Article -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<a href="blog-jouer-en-groupe.html" class="lg:col-span-8 group relative overflow-hidden bg-surface-container-low clean-border image-hover-filter">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover" alt="Groupe d'élèves sur scène en concert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWho94QZieosY4Wua67b4c7o7EJGqjsLP_GXDwsNX1glOIrgDO4qN3k17Mv3BuwOOFo7_y6IekWuG5tnDjIftrufZV31mjiXfZXbsLAOPXW5MHWbBSDYC2VACRe1QEU9ChoZkzJXzji7vmO1OaE5MMU5bifcC0fuu1mJIJaQK3SDk27hYweia0fDP3pJkIUg1s3fXgH5XnuObtLLTkmRdRlZCDCvLpBz6nGHTrdL_K69HaGJkvMF9WAT2ZOEhksMWhdJkmQQ1rY9U"/>
+</div>
+<div class="p-8 bg-surface-container-lowest">
+<span class="inline-block bg-primary-container text-on-primary-container font-label-sm text-label-sm px-3 py-1 mb-4 uppercase">À la une · Jeu en groupe</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 group-hover:text-primary-container transition-colors">Jouer en groupe : le déclic qui fait tout basculer</h2>
+<p class="text-on-surface-variant line-clamp-2 max-w-xl mb-6">On peut travailler seul pendant des mois. Mais le vrai saut, celui qui transforme un élève en musicien, se fait le jour où l'on joue avec les autres. On vous explique pourquoi.</p>
+<span class="inline-flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest border-b-2 border-primary-container group-hover:bg-primary-container transition-all">
+                        Lire l'article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</a>
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<a href="06_histoire.html" class="flex-1 bg-surface-container-low p-8 clean-border hover:bg-surface-container-high transition-colors group">
+<span class="text-primary font-label-sm text-label-sm uppercase mb-4 block">La vie de l'école</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Une école née des familles de Montagne</h3>
+<p class="text-on-surface-variant text-sm mb-6">Quand l'ancienne école a fermé, des parents ont refusé de laisser leurs enfants sans musique. Voici notre histoire.</p>
+<span class="text-primary font-label-md text-label-md uppercase border-b-2 border-primary-container group-hover:bg-primary-container transition-all">Découvrir</span>
+</a>
+<a href="blog-entretien-instrument.html" class="flex-1 bg-surface-container-low p-8 clean-border hover:bg-surface-container-high transition-colors group">
+<span class="text-primary font-label-sm text-label-sm uppercase mb-4 block">Entretien</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Protéger son instrument du climat de montagne</h3>
+<p class="text-on-surface-variant text-sm mb-6">Humidité, froid, chauffage : nos gestes simples pour que cordes et bois traversent l'hiver.</p>
+<span class="text-primary font-label-md text-label-md uppercase border-b-2 border-primary-container group-hover:bg-primary-container transition-all">Apprendre</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<section class="px-margin-mobile md:px-margin-desktop mb-12 flex flex-wrap gap-4 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase mr-4">Thèmes :</span>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2 uppercase hover:bg-primary-container hover:text-primary transition-colors">Tous</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Instruments</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Entretien</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Jeu en groupe</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Progresser</button>
+</section>
+<!-- Main Feed Grid -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24 md:mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Article 1 : La musique -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="blog-apprendre-la-musique.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="Disques vinyles et univers musical" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrkITHHzCJGUiuJjeqYWw3qIfk3eaPdVzQfU2rgIT-9bN6ziLpCvuFklj48zXa2IzVvv7-HfqNC-5A4bSpLzpgF53vY58IPF-_v34ZcqUDMF8qSb0tXIds_bhLXfX-JSseV5t983d-xsSv4YMOO4nKJwWzA0wuNryHRXRn77UwgzNwT3zNn3s-Q2YuIws5atV8MBgXn_5dz5go2T4dueFtTw1at7Ysxj6R-aZxPnX4bvj1cQsNXTxnYe1zvR57-vKV0ioE6VRUIY"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">La Musique</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">14 jan 2026</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Apprendre la musique : ce que ça change vraiment</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">On croit qu'il faut « avoir l'oreille ». La vérité, c'est que la musique s'apprend — et qu'elle transforme bien plus que vos doigts.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+<!-- Article 2 : Les instruments -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="blog-choisir-son-instrument.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="Tête de guitare" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5qV3rJUQqNSKN5UeOoJyQdpRrnnvEzfzLkv5gbH0B8vK0iU_4iD8BNEs4nWqcnCFk71GLHuaHCMqqO7fhDUR0l3h5PIPSi0Df10mr6IHKCWwOdC8kbbBgeept4Cq9nDEBB4SZHJGRGUwJkSrY2RCuXn2MPGqTD9Ymea1K_pIX6hqf8fjI7-DveGP8XVB5_JxR1VQxAz788ZcWcwGJfCKTNaK2uvAs0wd5o1Zc5dh3I2seek1j0rIOQu_RERVhzu5CjkCCZT3Pm8o"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Les Instruments</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">28 jan 2026</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Quel instrument choisir pour débuter ?</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Guitare, basse, batterie, piano ou chant : un guide honnête pour trancher sans se tromper, avantages et contraintes de chacun.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+<!-- Article 3 : Entretien -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="blog-entretien-instrument.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="Gros plan sur une batterie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWv2gFR497ewmYHaGJMBU5g-9oF1ebbVjr5jq6LTf_Hf_wqM9ATFn4hYoXacb-89Gp5z106iHXswONc3IMumGy26vlFfJ15UBvW40BWYVdZMzUi51YbHMMZ9qSZ5xguvqRyw2sc0grkUxQrl0oLSHbE6YhryADNXdU7Fm-akJY92c5vjQERdl0xpuaBD6oxSHxYkvLZ8yun3RrctULOmtjHXTNjWeB2VaXBjY_sbuEXyNlyMIHX45PJIPjhc_7Fy5Xj7mW5d9abNk"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Entretien</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">11 fév 2026</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Entretenir son instrument : le guide complet</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Cordes, peaux, cymbales, clavier : la routine instrument par instrument, avec un chapitre spécial climat de montagne.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+<!-- Article 4 : Jeu en groupe -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="blog-jouer-en-groupe.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="Ambiance de scène de concert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuTTg2FE6TQA_al9GG2p2-LBDK_C9i7QgRmncAN0ajRYHvZj7JBfZz8BOUmcFBtPiclJjApuCkxLNlBvQkgY0WP66molWpk5D-xorGlEtlYO0SPNQ8VvZgPB2l-7xnQrG1SA-ch-aw0yn-e6aHMHLL0uR9T5sf1OP7ea1holcfLmonr6D7xUdz7UgSDPXba90WlCutJdWitZJ1SjF3aQfuy6dJH_cvSd4uec4Aw4PZ70lJ0GHhmT0K3IXdHr5qmJsnpe3O07W7uoA"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Jeu en Groupe</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">25 fév 2026</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Jouer en groupe : le déclic qui fait tout basculer</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Écouter, tenir le tempo, trouver sa place : pourquoi le collectif fait progresser plus vite que tout le reste.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+<!-- Article 5 : Progresser -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="blog-travailler-chez-soi.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="Microphone de studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeaeYYZ0o5J1dyPsPVPWSHdEKmf08eIdjFfipDxZJAgxoydClxLDYpLOwZcL6dHJvepA6gaffRoI6F71vGyvWmgw3iDuMNupykvYSIIJb8LbbmwFh6TTCSXAW7W-a4TPYlE1boXY897ukU8D3-F8OGuQGDqSpFxHCJAgRQyN-T6g2fhyENp7rb8qtQ_pNqtR9qK2SLrWKoulyavvuKpvh7cNgWFJ9c7PCWWl7YZ1cO9bHkXXIs0Ip7W1-cteiy5ZTcKb1XBAmrGu0"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Progresser</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">10 mar 2026</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Bien travailler chez soi entre deux cours</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Le cours, c'est une heure. Les progrès se jouent à la maison : régularité, métronome, s'enregistrer, garder le plaisir.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+<!-- Article 6 : L'histoire -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<a href="06_histoire.html" class="block">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" alt="L'équipe fondatrice de MONTA'ZIK" src="assets/equipe.jpg"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Vie de l'école</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Notre histoire</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Née de la volonté de quelques familles</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Quand l'école de musique de Montagne a fermé, des parents ont dit non. De ce refus est née MONTA'ZIK.</p>
+</div>
+</a>
+<div class="px-8 pb-8">
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center font-label-sm text-label-sm text-on-primary-container">MZ</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par MONTA'ZIK</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24 md:mb-section-gap">
+<div class="bg-surface-container-low clean-border p-12 md:p-20 relative overflow-hidden">
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">RESTEZ DANS LE RYTHME</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Recevez nos conseils, l'annonce des ateliers et les dates des concerts de l'école directement dans votre boîte mail.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-surface-container-lowest text-on-surface border-0 border-b-2 border-outline focus:border-primary-container focus:ring-0 transition-colors uppercase font-label-md py-4 px-4" placeholder="VOTRE E-MAIL" type="email"/>
+<button type="button" class="bg-primary text-on-primary px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors">S'inscrire</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-outline-variant bg-surface-container-lowest px-margin-mobile md:px-margin-desktop py-16 flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-xs">
+<img alt="Emblème Monta’zik" class="h-32 w-auto self-start" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-md text-headline-md text-primary uppercase mb-6">MONTA'ZIK</div>
+<p class="text-on-surface-variant text-sm mb-8">L'école de musiques actuelles de Montagne, née de la volonté de familles. Apprenez, jouez, montez sur scène.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">play_arrow</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">camera</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">École</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="03_professeurs.html">Professeurs</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="02_tarifs.html">Tarifs</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="06_histoire.html">Notre histoire</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">Ressources</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="05_blog.html">Blog</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">Contact</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Montagne, France</span>
+</div>
+</div>
+<div class="w-full md:w-auto mt-12 md:mt-0 pt-8 md:pt-0 border-t md:border-t-0 border-outline-variant flex flex-col items-start md:items-end">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2026 MONTA'ZIK École de Musique. Tous droits réservés.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60 mt-1">Site réalisé par Rescue Pro</p>
+</div>
+</footer>
+<script>
+    // Micro-interactions: Navbar shrink on scroll
+    window.onscroll = function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-2', 'bg-background/98');
+            nav.classList.remove('py-4', 'bg-background/95');
+        } else {
+            nav.classList.add('py-4', 'bg-background/95');
+            nav.classList.remove('py-2', 'bg-background/98');
+        }
+    };
+
+    // Fade in elements on scroll
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('article').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
+</body></html>

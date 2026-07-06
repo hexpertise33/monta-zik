@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Le Blog de l'École | MONTA'ZIK</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d9d9d9",
+                    "on-secondary-fixed": "#1d1b16",
+                    "tertiary-fixed-dim": "#dadada",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e1e1e1",
+                    "on-tertiary-fixed-variant": "#444444",
+                    "on-primary": "#000000",
+                    "secondary-container": "#ccff00",
+                    "surface-bright": "#f9f9f9",
+                    "error": "#ba1a1a",
+                    "background": "#ffffff",
+                    "primary-fixed-dim": "#ccff00",
+                    "on-surface": "#1b1b1b",
+                    "tertiary-container": "#f3f3f3",
+                    "primary-fixed": "#ccff00",
+                    "on-error-container": "#410002",
+                    "inverse-on-surface": "#f2f0f4",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface": "#f9f9f9",
+                    "surface-container-high": "#ebebeb",
+                    "on-primary-fixed": "#000000",
+                    "surface-tint": "#ccff00",
+                    "on-primary-fixed-variant": "#000000",
+                    "on-tertiary-container": "#1b1b1b",
+                    "on-tertiary": "#000000",
+                    "surface-dim": "#dadada",
+                    "inverse-primary": "#ccff00",
+                    "outline": "#757575",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#000000",
+                    "on-surface-variant": "#444444",
+                    "on-secondary-container": "#000000",
+                    "tertiary": "#000000",
+                    "tertiary-fixed": "#dadada",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "secondary-fixed-dim": "#ccff00",
+                    "primary-container": "#ccff00",
+                    "inverse-surface": "#303030",
+                    "primary": "#000000",
+                    "surface-variant": "#e1e1e1",
+                    "on-background": "#1b1b1b",
+                    "surface-container": "#f9f9f9",
+                    "secondary": "#000000",
+                    "on-secondary-fixed-variant": "#000000",
+                    "secondary-fixed": "#ccff00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0rem",
+                    "lg": "0rem",
+                    "xl": "0rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "88px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clean-border {
+            border: 1px solid #e1e1e1;
+        }
+        .image-hover-filter img {
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        .image-hover-filter:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f9f9f9; }
+        ::-webkit-scrollbar-thumb { background: #dadada; }
+        ::-webkit-scrollbar-thumb:hover { background: #757575; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-outline-variant backdrop-blur-md bg-background/95 flex justify-between items-center px-margin-desktop py-4 transition-all duration-300 ease-in-out">
+<div class="font-headline-lg text-headline-lg-mobile tracking-tighter text-primary">MONTA'ZIK</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary-container pb-1 transition-colors" href="#">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Membership</a>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 uppercase tracking-widest hover:bg-primary-container transition-all duration-300">
+        Enroll Now
+    </button>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-desktop mb-section-gap">
+<div class="max-w-4xl">
+<span class="text-primary font-label-md text-label-md mb-4 block tracking-[0.2em] uppercase">Rhythm &amp; News</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-none">Le Blog de l'École</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-4 border-primary-container pl-6 py-2">
+                L'actualité brûlante de MONTA'ZIK. Des coulisses des concerts aux secrets de studio, plongez dans l'univers de la performance.
+            </p>
+</div>
+</section>
+<!-- Featured Article -->
+<section class="px-margin-desktop mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 group relative overflow-hidden bg-surface-container-low clean-border image-hover-filter">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Electric guitarist performing live" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWho94QZieosY4Wua67b4c7o7EJGqjsLP_GXDwsNX1glOIrgDO4qN3k17Mv3BuwOOFo7_y6IekWuG5tnDjIftrufZV31mjiXfZXbsLAOPXW5MHWbBSDYC2VACRe1QEU9ChoZkzJXzji7vmO1OaE5MMU5bifcC0fuu1mJIJaQK3SDk27hYweia0fDP3pJkIUg1s3fXgH5XnuObtLLTkmRdRlZCDCvLpBz6nGHTrdL_K69HaGJkvMF9WAT2ZOEhksMWhdJkmQQ1rY9U"/>
+</div>
+<div class="p-8 bg-surface-container-lowest">
+<span class="inline-block bg-primary-container text-on-primary-container font-label-sm text-label-sm px-3 py-1 mb-4 uppercase">Recap Concert</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 group-hover:text-primary-container transition-colors">LIVE AT THE VOID: Session d'Hiver 2024</h2>
+<p class="text-on-surface-variant line-clamp-2 max-w-xl mb-6">Retour sur une soirée électrique où nos étudiants ont partagé la scène avec les pros. Énergie brute et solos mémorables.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest border-b-2 border-primary-container hover:bg-primary-container transition-all" href="#">
+                        Lire l'article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-surface-container-low p-8 clean-border hover:bg-surface-container-high transition-colors group">
+<span class="text-primary font-label-sm text-label-sm uppercase mb-4 block">School News</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Nouveaux Studios à Paris Sud</h3>
+<p class="text-on-surface-variant text-sm mb-6">Découvrez nos nouvelles cabines d'enregistrement équipées du dernier cri analogique.</p>
+<a class="text-primary font-label-md text-label-md uppercase border-b-2 border-primary-container group-hover:bg-primary-container transition-all" href="#">Détails</a>
+</div>
+<div class="flex-1 bg-surface-container-low p-8 clean-border hover:bg-surface-container-high transition-colors group">
+<span class="text-primary font-label-sm text-label-sm uppercase mb-4 block">Gear Tips</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Le Guide Ultime des Pedalboards</h3>
+<p class="text-on-surface-variant text-sm mb-6">Optimisez votre chaîne de signal pour un grain unique en live.</p>
+<a class="text-primary font-label-md text-label-md uppercase border-b-2 border-primary-container group-hover:bg-primary-container transition-all" href="#">Apprendre</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<section class="px-margin-desktop mb-12 flex flex-wrap gap-4 items-center">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase mr-4">Filtrer par :</span>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2 uppercase hover:bg-primary-container transition-colors">Tous</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Concerts</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Matos</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">Technique</button>
+<button class="bg-surface-container-lowest p-2 px-6 border border-outline-variant font-label-sm text-label-sm uppercase hover:bg-primary-container transition-colors">News</button>
+</section>
+<!-- Main Feed Grid -->
+<section class="px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Article 1 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Drums close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWv2gFR497ewmYHaGJMBU5g-9oF1ebbVjr5jq6LTf_Hf_wqM9ATFn4hYoXacb-89Gp5z106iHXswONc3IMumGy26vlFfJ15UBvW40BWYVdZMzUi51YbHMMZ9qSZ5xguvqRyw2sc0grkUxQrl0oLSHbE6YhryADNXdU7Fm-akJY92c5vjQERdl0xpuaBD6oxSHxYkvLZ8yun3RrctULOmtjHXTNjWeB2VaXBjY_sbuEXyNlyMIHX45PJIPjhc_7Fy5Xj7mW5d9abNk"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Drummers</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">12 Mar 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Vitesse et Précision : 5 Exercices de Rudiments</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Améliorez votre endurance et votre clarté de frappe avec cette routine quotidienne conçue par nos professeurs.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Alex Rivera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYiuaK9h2Sck5los5TVdotVMCXKzxImJAW33J-EczH3t-vSBtouTplxKkIoO1xpzUesigRHtqZFN-CL4PXigacp1i518CwTVJXSABTbBpDTVI2YD1CTkR5UqQysRMtBGUJBr6jqeyv7epCeMJ5uvtMPH4dGapnzADHekoKeDp5IslOnVBdTxywB1j2QXE3b4VhrJSNXBcC_hSvB0bB8CnijoA6AvB0r0VH53t7wLTMJ9mSfm3F0O2dKo-xNtBFBEiJf853WagoUYM"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Alex Rivera</span>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Guitar headstock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5qV3rJUQqNSKN5UeOoJyQdpRrnnvEzfzLkv5gbH0B8vK0iU_4iD8BNEs4nWqcnCFk71GLHuaHCMqqO7fhDUR0l3h5PIPSi0Df10mr6IHKCWwOdC8kbbBgeept4Cq9nDEBB4SZHJGRGUwJkSrY2RCuXn2MPGqTD9Ymea1K_pIX6hqf8fjI7-DveGP8XVB5_JxR1VQxAz788ZcWcwGJfCKTNaK2uvAs0wd5o1Zc5dh3I2seek1j0rIOQu_RERVhzu5CjkCCZT3Pm8o"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Guitar Gear</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">08 Mar 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Pourquoi le Vintage n'est pas Toujours Mieux</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">L'évolution des micros modernes face aux classiques des années 60. Un comparatif sonore sans concession.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Marc Lefebvre" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIzs40w83LUQlYtuLEb6CLMy3fHvUzDrSO3-4opeazF6tMj8GY5FiU9cx5rQPXftg4Ld2TPiyA--gVVZjr9YiAnPSlqkSihpNayF1u_H6ycD68jrPZuiQMTWGwDPJYyJS0xBFxJ8v_fscfS5wOvaoQlKcHCeMyi6x7ab4JtQKmFmKwd7yj7bfkgIiMtemBfnRw3YEPAeecqwG8mxv06JBtFkfEcZcZCIKQEEYtdbtNXWIzc_IsxLoNvE9juemBr0CDcp5EM2eGNk"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Marc Lefebvre</span>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Concert stage atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuTTg2FE6TQA_al9GG2p2-LBDK_C9i7QgRmncAN0ajRYHvZj7JBfZz8BOUmcFBtPiclJjApuCkxLNlBvQkgY0WP66molWpk5D-xorGlEtlYO0SPNQ8VvZgPB2l-7xnQrG1SA-ch-aw0yn-e6aHMHLL0uR9T5sf1OP7ea1holcfLmonr6D7xUdz7UgSDPXba90WlCutJdWitZJ1SjF3aQfuy6dJH_cvSd4uec4Aw4PZ70lJ0GHhmT0K3IXdHr5qmJsnpe3O07W7uoA"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Community</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">05 Mar 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Vaincre le Trac : Les Astuces Pro</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Comment transformer l'adrénaline en énergie créative avant de monter sur scène. Témoignages de nos élèves.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Sarah Cohen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqjdwhbUf0_LvhuFpWK-p6gYF1l55eTC-j9l4_jsbJTWBzr86rvy4fkZae0x7YgaGrkiON149EOpSiUMdhuaEhNf2CLxlFFpb55YDxuhMFFOIJSiw1vjHGZ4ZZ_L5qAYCyJiBp04f2im4Qcr0AWxRc9Qiq9ovtkkGp-nwp-3YtB8CjNHvuj1j1yQJeyq2TK_0wicoKJbqXeo3y4WLkNoO-mJRcdM5WfBVUwPziwVTo2xmsR5aqPCQcL1W8DNcTGjof71fXoh1Aygs"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Sarah Cohen</span>
+</div>
+</div>
+</article>
+<!-- Article 4 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Synthesizer panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoC85k_o_vDvFRWDKc0Jrbv3TZnuxkFnaRNYN435amQyY8xA8H1iFzvGpcfw7oCdvI3CyvNkY-YxszfEJTQYMfCSuNJ406Ktqyqr2lde_qMXYMyyvW0cgiUDD91NKSJecpohrZTQMsfBWkN2xQCRaUh6FxMBPm3NhsM9xMOG6hNMw47gT-WRUY5LaUFFxMtrZTyqnTurzWMSmuhXtxrtt2dvLsUIY8wwvBtNe6-AYGGJqyVLxe2X6YwJ4a1DFW3RWBUAvpR3SM7f4"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Synthesis</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">01 Mar 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">La Synthèse Soustractive Expliquée</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Comprendre les bases du son électronique pour créer vos propres textures uniques dès aujourd'hui.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Julien Dax" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuheYJZGPBI2huo4k2Gbyf5GezGABmxpqn2KGWFCiGd4o5USlWheG1wwlDJbms8P_x7RdTw6NOXCwXZ2qFqOCeXKWhe4jWNB6KLZBkq1Fucv5ZD8Ja4de7v9g2emN6Vf6KJWG5imTssFRxrF_Yc946JoWFIbYg9iADlh4uSNyyt3OdVlMkylgWCzm00xY4U1ZCYSRgKmQmPpws-YMK75vZPgqXJYkQMa-cfQgFS6a35NX-X99QSxdQ8-r8Y4GaUnqlC4U-WO2plm0"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Julien Dax</span>
+</div>
+</div>
+</article>
+<!-- Article 5 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Vinyl records" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrkITHHzCJGUiuJjeqYWw3qIfk3eaPdVzQfU2rgIT-9bN6ziLpCvuFklj48zXa2IzVvv7-HfqNC-5A4bSpLzpgF53vY58IPF-_v34ZcqUDMF8qSb0tXIds_bhLXfX-JSseV5t983d-xsSv4YMOO4nKJwWzA0wuNryHRXRn77UwgzNwT3zNn3s-Q2YuIws5atV8MBgXn_5dz5go2T4dueFtTw1at7Ysxj6R-aZxPnX4bvj1cQsNXTxnYe1zvR57-vKV0ioE6VRUIY"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Culture</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">28 Feb 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">10 Albums de Rock à Étudier Absolument</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">De Led Zeppelin à Radiohead, les structures et arrangements qui ont révolutionné la musique moderne.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Emma Morel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmTFtG3KPtQJmaq33QiduHKusueBbseoZo0TVTOJaHXiZTmkc1AIALTwWTn7SN3HQoT2w6Pd1gopkPA08bofyPI3R7w4dS9nWD8XhS9_LLkXpzqaTnLjvur4QGTDB9rXQpbRKtJ-khYwSLqWrIdnL-I7GBAFrVtxmP93OtoXdhcYWRD6_QYXpyYLjnQ-xqHy07hiT0t9LP1iN_IxorKGMuNrwKprEkXSSE2t3eYGCdKnahutOuD_vNL8WyFQwXBhwHGPqXmcIluDY"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Emma Morel</span>
+</div>
+</div>
+</article>
+<!-- Article 6 -->
+<article class="group bg-surface-container-lowest clean-border transition-all duration-500 hover:shadow-xl">
+<div class="aspect-video overflow-hidden image-hover-filter">
+<img class="w-full h-full object-cover" data-alt="Studio microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeaeYYZ0o5J1dyPsPVPWSHdEKmf08eIdjFfipDxZJAgxoydClxLDYpLOwZcL6dHJvepA6gaffRoI6F71vGyvWmgw3iDuMNupykvYSIIJb8LbbmwFh6TTCSXAW7W-a4TPYlE1boXY897ukU8D3-F8OGuQGDqSpFxHCJAgRQyN-T6g2fhyENp7rb8qtQ_pNqtR9qK2SLrWKoulyavvuKpvh7cNgWFJ9c7PCWWl7YZ1cO9bHkXXIs0Ip7W1-cteiy5ZTcKb1XBAmrGu0"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-sm text-label-sm text-primary uppercase">Voice</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">25 Feb 2024</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4 leading-tight group-hover:text-primary-container transition-colors">Microphones : Quel Modèle pour votre Voix ?</h4>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-3">Condensateur ou dynamique ? Apprenez à choisir le matériel qui sublimera votre timbre naturel.</p>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Teacher Sofia Larsson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGGror4NHQOEhumbYoksSIOKIgJcXlA5BmJq4X8nQ42QOox_aUq7tJtc7pYTwuuKwsLs-nCsxm-V6LT7F70evXEYgY7yCveySdYCS2KZc127tJGXCEpqzjDewSxC29-xMyD1mMvssSmErvTKSPSoXXC8FsKNeNL-M7x1-AXL0-0DSrWiC9bLDA3byVoqJltr6eDTB73LWSTm8wrw857iD7UxMjdr1YErTnJsabfmNbwAGH5cd-rUA-d2ixUiUY_5L4lyTQSVNKavw"/>
+</div>
+<span class="text-xs font-label-md text-on-surface uppercase">Par Sofia Larsson</span>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-20 text-center">
+<button class="px-12 py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.3em] hover:bg-primary-container hover:text-primary transition-all shadow-lg">
+                Charger plus d'articles
+            </button>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="px-margin-desktop mb-section-gap">
+<div class="bg-surface-container-low clean-border p-12 md:p-20 relative overflow-hidden">
+<div class="relative z-10 max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">RESTEZ DANS LE RYTHME</h2>
+<p class="text-on-surface-variant mb-10 text-lg">Inscrivez-vous pour recevoir les invitations aux masterclasses et les derniers tests de matos directement dans votre boîte mail.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-surface-container-lowest text-on-surface border-0 border-b-2 border-outline focus:border-primary-container focus:ring-0 transition-colors uppercase font-label-md py-4 px-4" placeholder="VOTRE EMAIL" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors">S'inscrire</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-outline-variant bg-surface-container-lowest px-margin-desktop py-16 flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-xs">
+<div class="font-headline-md text-headline-md text-primary uppercase mb-6">MONTA'ZIK</div>
+<p class="text-on-surface-variant text-sm mb-8">L'école qui amplifie votre talent. Des cours de haute intensité pour musiciens exigeants.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">play_arrow</span></a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-sm">camera</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">École</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Membership</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">Ressources</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Student Portal</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Staff Login</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase mb-2">Légal</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="w-full md:w-auto mt-12 md:mt-0 pt-8 md:pt-0 border-t md:border-t-0 border-outline-variant flex flex-col items-end">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-80">© 2024 MONTA'ZIK Music School. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    // Micro-interactions: Navbar shrink on scroll
+    window.onscroll = function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-2', 'bg-background/98');
+            nav.classList.remove('py-4', 'bg-background/95');
+        } else {
+            nav.classList.add('py-4', 'bg-background/95');
+            nav.classList.remove('py-2', 'bg-background/98');
+        }
+    };
+
+    // Fade in elements on scroll
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('article, section > div').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+</script>
+</body></html>

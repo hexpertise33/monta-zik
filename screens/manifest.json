@@ -1,0 +1,73 @@
+{
+  "project": {
+    "id": "12214213643286460259",
+    "title": "MONTA'ZIK École de Musique",
+    "theme": "Clair (Light) / High-Clarity aesthetic",
+    "codeSource": "Stitch official export (stitch_monta_zik_cole_de_musique.zip)"
+  },
+  "screens": [
+    {
+      "order": 1,
+      "id": "c44603885caf4f88b50ee307da863fb8",
+      "name": "Accueil - MONTA'ZIK (Clair)",
+      "image": "images/01_accueil.png",
+      "code": "code/01_accueil.html",
+      "width": 2560,
+      "height": 7732
+    },
+    {
+      "order": 2,
+      "id": "a724ffd75c4443459996dc41296ceaf3",
+      "name": "Tarifs - MONTA'ZIK (Clair)",
+      "image": "images/02_tarifs.png",
+      "code": "code/02_tarifs.html",
+      "width": 2560,
+      "height": 6100
+    },
+    {
+      "order": 3,
+      "id": "ede5069768f54bd19a29aa86a964acdf",
+      "name": "Nos Professeurs - MONTA'ZIK (Clair)",
+      "image": "images/03_professeurs.png",
+      "code": "code/03_professeurs.html",
+      "width": 2560,
+      "height": 5462
+    },
+    {
+      "order": 4,
+      "id": "8f3b696a4777405d84c51d619b616d91",
+      "name": "Contact & Adhésion - MONTA'ZIK (Clair)",
+      "image": "images/04_contact.png",
+      "code": "code/04_contact.html",
+      "width": 2560,
+      "height": 5266
+    },
+    {
+      "order": 5,
+      "id": "6e5ff201ca114b658ba92566980992ee",
+      "name": "Blog - MONTA'ZIK (Clair)",
+      "image": "images/05_blog.png",
+      "code": "code/05_blog.html",
+      "width": 2560,
+      "height": 7230
+    },
+    {
+      "order": 6,
+      "id": "asset-stub-assets_2487e8755315400eb0099e71b9c97f05",
+      "name": "Design System",
+      "image": null,
+      "code": null,
+      "docs": ["design-system.md", "design-system.high-clarity.md"],
+      "note": "Not a rendered screen. design-system.md = 'Electric Stage' (dark base, official export). design-system.high-clarity.md = light variant used by the actual (Clair) screens."
+    }
+  ],
+  "designSystem": {
+    "note": "See design-system.md (Electric Stage / dark) and design-system.high-clarity.md (light).",
+    "fonts": ["Anton (headlines)", "Hanken Grotesk (body/labels)", "JetBrains Mono (light-variant labels)"],
+    "signatureColors": {
+      "electricLime": "#ccff00",
+      "electricBlue": "#0046fa / #0047ff",
+      "charcoal": "#121212"
+    }
+  }
+}

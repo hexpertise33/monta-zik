@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notre histoire | MONTA'ZIK</title>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .rim-light {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .glow-primary {
+            filter: drop-shadow(0 0 8px rgba(245, 197, 68, 0.6));
+        }
+        .stage-gradient {
+            background:
+                linear-gradient(to right, rgba(249, 249, 249, 0.55) 0%, rgba(249, 249, 249, 0.15) 45%, transparent 68%),
+                linear-gradient(to bottom, transparent 0%, transparent 24%, rgba(249, 249, 249, 0.55) 50%, rgba(249, 249, 249, 0.9) 78%, #f9f9f9 100%);
+        }
+        .card-hover-reveal img {
+            filter: grayscale(100%) contrast(110%);
+            transition: all 0.5s ease;
+        }
+        .card-hover-reveal:hover img {
+            filter: grayscale(0%) contrast(100%);
+            transform: scale(1.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f3f3f3;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #131316;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#f9dedc",
+                    "background": "#f9f9f9",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary": "#131316",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#f5c544",
+                    "surface-bright": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#313033",
+                    "on-primary-container": "#131316",
+                    "inverse-on-surface": "#f4f0f4",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474e",
+                    "on-error-container": "#410002",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#131316",
+                    "inverse-primary": "#f5c544",
+                    "primary-container": "#f5c544",
+                    "secondary-container": "#131316",
+                    "on-surface": "#1b1b1f",
+                    "surface-dim": "#dadada",
+                    "secondary": "#131316",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#131316",
+                    "on-tertiary-container": "#1d1b16",
+                    "surface-tint": "#f5c544",
+                    "on-secondary-fixed-variant": "#131316",
+                    "primary-fixed-dim": "#f5c544",
+                    "on-primary-fixed": "#131316",
+                    "on-secondary-container": "#ffffff",
+                    "surface-container": "#f3f3f3",
+                    "tertiary": "#131316",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "outline": "#74777f",
+                    "tertiary-container": "#f3f3f3",
+                    "on-background": "#1b1b1f",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-variant": "#e1e2ec",
+                    "surface-container-highest": "#e3e3e3",
+                    "surface-container-high": "#ebebeb",
+                    "outline-variant": "#c4c6d0",
+                    "secondary-fixed": "#131316",
+                    "error": "#b3261e",
+                    "on-secondary-fixed": "#ffffff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0rem",
+                    "lg": "0rem",
+                    "xl": "0rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-xl": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-md": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["80px", {"lineHeight": "88px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md custom-scrollbar overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 border-b border-black/5 backdrop-blur-md transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-full">
+<a class="flex items-center gap-3" href="01_accueil.html">
+<img alt="Emblème Monta’zik" class="h-20 w-auto" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">MONTA'ZIK</div>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="01_accueil.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="03_professeurs.html">Professeurs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="02_tarifs.html">Tarifs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="05_blog.html">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-md text-label-md uppercase hover:bg-primary-container hover:text-primary transition-all duration-300">S'inscrire</button>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="relative w-full min-h-[85vh] flex items-end overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-125" data-alt="Jeune musicienne guitare en main devant un micro, batterie en arrière-plan." style="background-image: url('https://images.pexels.com/photos/8412414/pexels-photo-8412414.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600')"></div>
+<div class="absolute inset-0 stage-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="max-w-5xl">
+<span class="inline-block px-3 py-1 bg-primary-container text-primary text-label-md font-label-md mb-6 uppercase tracking-widest glow-primary">Notre histoire</span>
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-8 leading-none">NÉE DE LA VOLONTÉ DE QUELQUES FAMILLES.</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl">L'histoire de MONTA'ZIK ne commence pas dans un bureau. Elle commence autour d'une table, entre des parents qui ont dit non.</p>
+</div>
+</div>
+</header>
+
+<!-- INTRO -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+<div class="max-w-4xl mx-auto">
+<p class="font-headline-md text-2xl md:text-3xl text-primary leading-snug">
+MONTA'ZIK n'est pas née d'un projet commercial. Elle est née d'un <span class="bg-primary-container px-2">élan de parents</span> qui refusaient une idée simple&nbsp;: que leurs enfants n'aient plus, du jour au lendemain, aucun endroit où jouer.
+</p>
+</div>
+</section>
+
+<!-- TIMELINE / CHAPITRES -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap bg-background">
+<div class="max-w-5xl mx-auto">
+<div class="relative border-l-2 border-black/10 pl-8 md:pl-14 space-y-24">
+
+<!-- Chapitre 1 -->
+<div class="relative">
+<span class="absolute -left-[41px] md:-left-[65px] top-1 w-5 h-5 bg-primary-container border-4 border-background rounded-full"></span>
+<span class="block font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mb-3">Chapitre 01 — La fermeture</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-5 leading-tight">Le jour où la musique s'est tue</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl">
+Il y a quelques années, l'école de musique qui faisait vibrer Montagne a fermé ses portes. Du jour au lendemain, des dizaines d'enfants se sont retrouvés sans professeur, sans salle, sans scène. Les guitares sont retournées dans leurs étuis. Les cymbales ont cessé de résonner. Pour beaucoup de familles, c'était bien plus qu'un cours qui disparaissait&nbsp;: c'était une passion qu'on laissait s'éteindre.
+</p>
+</div>
+
+<!-- Chapitre 2 -->
+<div class="relative">
+<span class="absolute -left-[41px] md:-left-[65px] top-1 w-5 h-5 bg-primary-container border-4 border-background rounded-full"></span>
+<span class="block font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mb-3">Chapitre 02 — Le refus</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-5 leading-tight">Des parents qui n'ont pas baissé les bras</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl">
+Mais certains parents n'ont pas voulu s'y résoudre. Ils avaient vu leurs enfants s'illuminer, un médiator ou deux baguettes à la main. Ils savaient ce que la musique leur apportait&nbsp;: la confiance, la rigueur, la joie, les amitiés qui se nouent dans un local de répétition. Laisser tout cela disparaître&nbsp;? Hors de question.
+</p>
+</div>
+
+<!-- Chapitre 3 -->
+<div class="relative">
+<span class="absolute -left-[41px] md:-left-[65px] top-1 w-5 h-5 bg-primary-container border-4 border-background rounded-full"></span>
+<span class="block font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mb-3">Chapitre 03 — La naissance</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-5 leading-tight">Alors ils ont créé l'école eux-mêmes</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl mb-8">
+Ils ont fait ce que personne n'attendait d'eux&nbsp;: bâtir une nouvelle école, de leurs propres mains. Des réunions le soir après le travail. Des professeurs rappelés un par un. Une salle trouvée, des instruments rassemblés, des dossiers montés. De ce grand mouvement collectif est née <strong class="text-primary">MONTA'ZIK</strong> — une école de musiques actuelles fondée par des familles, pour leurs enfants.
+</p>
+<figure class="max-w-md">
+<div class="aspect-[4/5] overflow-hidden border border-black/5 rim-light">
+<img class="w-full h-full object-cover" alt="L'équipe fondatrice de MONTA'ZIK réunie, tee-shirt de l'école." src="assets/equipe.jpg"/>
+</div>
+<figcaption class="mt-3 font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">L'équipe MONTA'ZIK</figcaption>
+</figure>
+</div>
+
+<!-- Chapitre 4 -->
+<div class="relative">
+<span class="absolute -left-[41px] md:-left-[65px] top-1 w-5 h-5 bg-primary-container border-4 border-background rounded-full"></span>
+<span class="block font-label-md text-label-md uppercase tracking-widest text-on-surface-variant mb-3">Chapitre 04 — Aujourd'hui</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-5 leading-tight">Un héritage qui monte sur scène</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed max-w-2xl">
+Aujourd'hui encore, cet esprit nous anime. Ici, on ne se contente pas d'enseigner des notes&nbsp;: on prolonge une histoire commencée par des parents qui ont choisi l'action plutôt que le renoncement. Chaque élève qui monte sur scène, chaque premier concert, chaque riff enfin maîtrisé leur donne raison.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CITATION -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary text-on-primary">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6">format_quote</span>
+<blockquote class="font-headline-md text-2xl md:text-4xl leading-snug mb-8">
+« On ne pouvait pas laisser nos enfants sans musique. Alors on a construit l'école qu'il leur fallait. »
+</blockquote>
+<p class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Les parents fondateurs de MONTA'ZIK</p>
+</div>
+</section>
+
+<!-- VALEURS -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+<div class="max-w-5xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-16 leading-tight">Ce que cette histoire a laissé dans nos murs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="border-t-4 border-primary-container pt-6">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">diversity_1</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-3">Née de parents</h3>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">Pas d'investisseurs, pas de calculs. Juste des familles décidées à offrir le meilleur à leurs enfants — et cette exigence ne nous a jamais quittés.</p>
+</div>
+<div class="border-t-4 border-primary-container pt-6">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-3">Un esprit de collectif</h3>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">L'entraide qui a fondé l'école guide encore chaque cours, chaque répétition et chaque concert. Ici, on avance ensemble.</p>
+</div>
+<div class="border-t-4 border-primary-container pt-6">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">volunteer_activism</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-3">Aucun enfant de côté</h3>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">La raison d'être qui nous a fait naître&nbsp;: que chacun trouve sa place, son instrument et sa scène, quel que soit son niveau.</p>
+</div>
+</div>
+
+<!-- STATS -->
+<div class="grid grid-cols-3 gap-gutter mt-20 border-t border-black/10 pt-12">
+<div>
+<div class="text-headline-lg font-headline-lg text-primary mb-2">3</div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Professeurs experts</div>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary mb-2">150+</div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Élèves formés</div>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary mb-2">3 ans</div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">Portés par les familles</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background text-center">
+<div class="max-w-4xl mx-auto border-y border-black/10 py-24">
+<h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl mb-6 uppercase text-primary leading-none">L'histoire continue.<br/>La prochaine page, c'est la vôtre.</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-12 max-w-2xl mx-auto">Rejoignez une école bâtie avec le cœur, où chaque enfant a sa place et sa scène.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<a href="04_contact.html" class="bg-primary text-on-primary px-12 py-5 font-label-md text-label-md uppercase hover:bg-primary-container hover:text-primary transition-all duration-300">Rejoindre l'aventure</a>
+<a href="02_tarifs.html" class="border border-primary text-primary px-12 py-5 font-label-md text-label-md uppercase hover:bg-primary hover:text-on-primary transition-all duration-300">Voir nos formules</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-low border-t border-black/5">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop py-16 gap-gutter max-w-full">
+<div class="flex flex-col gap-6 max-w-sm">
+<img alt="Emblème Monta’zik" class="h-32 w-auto self-start" src="assets/logo-emblem-light.svg"/>
+<div class="font-headline-md text-headline-md text-primary uppercase">MONTA'ZIK</div>
+<p class="text-on-surface-variant text-body-md font-body-md">
+                    L'école de musique de référence pour les musiques actuelles. Apprenez, jouez, performez.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-surface-container-highest hover:bg-primary-container text-primary transition-colors" href="https://www.facebook.com/profile.php?id=61550663325502" target="_blank" rel="noopener noreferrer" aria-label="Facebook Monta'zik">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"/></svg>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">École</h4>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Conditions d'utilisation</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">Espace</h4>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Portail Étudiant</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="#">Connexion Équipe</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">Contact</h4>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Montagne, France</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">+33 0 00 00 00 00</span>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm opacity-60">© 2024 MONTA'ZIK École de Musique. Tous droits réservés.</span>
+<div class="flex gap-8">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Site réalisé par Rescue Pro</span>
+</div>
+</div>
+</footer>
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
