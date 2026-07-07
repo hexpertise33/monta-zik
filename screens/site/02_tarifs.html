@@ -105,7 +105,7 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-black/5 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300 ease-in-out">
 <a class="flex items-center gap-3" href="01_accueil.html">
-<img alt="Emblème Monta’zik" class="h-20 w-auto" src="assets/logo-emblem-light.svg"/>
+<img alt="Emblème Monta’zik" class="h-12 md:h-20 w-auto" src="assets/logo-emblem-light.svg"/>
 <div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">MONTA'ZIK</div>
 </a>
 <div class="hidden md:flex gap-8 items-center">
@@ -115,7 +115,8 @@
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="05_blog.html">Blog</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="04_contact.html">Adhésion</a>
 </div>
-<button class="bg-primary px-6 py-2 rounded-none font-label-md text-label-md text-white hover:bg-primary-container hover:text-black transition-all duration-300 uppercase">
+<button type="button" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" class="md:hidden text-primary p-1 flex items-center"><span class="material-symbols-outlined text-4xl">menu</span></button>
+<button class="hidden md:inline-block bg-primary px-6 py-2 rounded-none font-label-md text-label-md text-white hover:bg-primary-container hover:text-black transition-all duration-300 uppercase">
             S'inscrire
         </button>
 </nav>
@@ -312,4 +313,29 @@
             }
         });
     </script>
+<!-- Menu mobile plein écran -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white hidden flex-col">
+<div class="flex justify-between items-center px-margin-mobile py-4 border-b border-black/10">
+<span class="font-headline-lg text-2xl tracking-tighter text-primary">MONTA'ZIK</span>
+<button type="button" id="menu-close" aria-label="Fermer le menu" class="text-primary p-1 flex items-center"><span class="material-symbols-outlined text-4xl">close</span></button>
+</div>
+<nav class="flex flex-col px-margin-mobile py-6 gap-1">
+<a href="01_accueil.html" class="py-4 border-b border-black/10 font-headline-md text-2xl uppercase text-primary">Accueil</a>
+<a href="03_professeurs.html" class="py-4 border-b border-black/10 font-headline-md text-2xl uppercase text-primary">Professeurs</a>
+<a href="02_tarifs.html" class="py-4 border-b border-black/10 font-headline-md text-2xl uppercase text-primary">Tarifs</a>
+<a href="05_blog.html" class="py-4 border-b border-black/10 font-headline-md text-2xl uppercase text-primary">Blog</a>
+<a href="04_contact.html" class="py-4 border-b border-black/10 font-headline-md text-2xl uppercase text-primary">Adhésion</a>
+<a href="04_contact.html" class="mt-6 bg-primary text-white text-center py-4 font-label-md text-label-md uppercase tracking-widest">S'inscrire</a>
+</nav>
+</div>
+<script>
+(function(){
+  var t=document.getElementById('menu-toggle'),m=document.getElementById('mobile-menu'),c=document.getElementById('menu-close');
+  if(!t||!m)return;
+  function setOpen(o){m.classList.toggle('hidden',!o);m.classList.toggle('flex',o);document.documentElement.style.overflow=o?'hidden':'';t.setAttribute('aria-expanded',o?'true':'false');}
+  t.addEventListener('click',function(){setOpen(true);});
+  if(c)c.addEventListener('click',function(){setOpen(false);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false);});});
+})();
+</script>
 </body></html>
